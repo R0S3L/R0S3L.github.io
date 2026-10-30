@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <title>IT Lexicon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <p class="manline"><span>it-lexicon</span><span>Student reference</span></p>
+    <h1>IT Lexicon</h1>
+    <p class="lede">Terms and phrases you meet in IT when you read documentation, write code, fix bugs and work in a team. Each entry has a Russian translation, a plain English definition, an example and audio. <strong id="total"></strong></p>
+
+    <nav class="tabs" aria-label="Sections">
+      <a href="#glossary" id="tab-glossary">Glossary</a>
+      <a href="#phrases" id="tab-phrases">Phrasebook</a>
+      <a href="#cards" id="tab-cards">Flashcards</a>
+      <a href="#quiz" id="tab-quiz">Quiz</a>
+      <a href="#about" id="tab-about">Survey</a>
+    </nav>
+
+    <section class="panel" id="panel-glossary">
+      <div class="toolbar">
+        <input type="search" id="q" placeholder="Search a term, a Russian word or a definition" aria-label="Search">
+        <select id="level" aria-label="Level">
+          <option value="all">All levels</option>
+          <option value="A2">A2 and below</option>
+          <option value="B1">Up to B1</option>
+          <option value="B2">Up to B2</option>
+        </select>
+      </div>
+      <div class="chips" id="stages" role="group" aria-label="Area of IT"></div>
+      <p class="count" id="count"></p>
+      <div class="grid" id="list"></div>
+    </section>
+
+    <section class="panel" id="panel-phrases" hidden>
+      <div class="chips" id="phgroups" role="group" aria-label="Phrase groups"></div>
+      <p class="tip" id="phtip"></p>
+      <div class="grid" id="phlist"></div>
+    </section>
+
+    <section class="panel" id="panel-cards" hidden>
+      <div class="toolbar">
+        <select id="cardstage" aria-label="Deck"></select>
+        <button class="btn ghost" id="shuffle" type="button">Shuffle</button>
+      </div>
+      <div class="card-stage" id="cardarea"></div>
+    </section>
+
+    <section class="panel" id="panel-quiz" hidden>
+      <div id="quizarea"></div>
+    </section>
+
+    <section class="panel" id="panel-about" hidden>
+      <div class="survey" id="survey"></div>
+    </section>
+
+    <footer>Built from a survey of 23 first- and second-year students, October 2026. Covers general IT vocabulary, not only the web. Pronunciation uses your browser's built-in voice.</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

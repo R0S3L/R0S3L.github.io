@@ -240,7 +240,7 @@ var PH=[
  ["I've already tried clearing the cache.","Я уже пробовал очистить кэш."],
  ["Thanks in advance!","Заранее спасибо!"]]},
 {id:"readme",name:"README sections",tip:"A README answers three questions: what is this, how to run it, how to help.",items:[
- ["Installation","Установка"],["Usage","Использование"],["Prerequisites: Node.js 20 or later.","Требования: Node.js 20 или новее."],
+ ["Installation","Установка"],["Usage","Использование"],["Requirements: Node.js 20 or later.","Требования: Node.js 20 или новее."],
  ["Contributing","Как внести вклад"],["License","Лицензия"],["Known issues","Известные проблемы"]]}
 ];
 

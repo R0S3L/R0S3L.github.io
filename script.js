@@ -278,7 +278,7 @@ function speak(text,slow){
 function audioBtns(text){
   if(!CAN_SPEAK)return null;
   return h("div",{class:"audio"},
-    h("button",{class:"icon-btn",type:"button","aria-label":"Play "+text,title:"Play",onclick:function(){speak(text,false)},text:"Play"}),
+    h("button",{class:"icon-btn",type:"button","aria-label":"Play "+text,title:"Play",onclick:function(){speak(text,false)},text:"▶️"}),
     h("button",{class:"icon-btn",type:"button","aria-label":"Play "+text+" slowly",title:"Slow",onclick:function(){speak(text,true)},text:"Slow"})
   );
 }

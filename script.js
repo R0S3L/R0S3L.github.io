@@ -453,12 +453,12 @@ function renderQuiz(){
       });
       fb.append(
         h("p",{text:(ok?"Correct. ":"Not quite. ")+t[4]}),
-        h("code",{text:t[5]}),
-        t[6]&&t[6].ff?h("p",{class:"note"},h("b",{text:"False friend. "}),t[6].ff):null,
-        h("div",{class:"row"},
-          CAN_SPEAK?h("button",{class:"btn ghost",type:"button",onclick:function(){speak(t[1],false)},text:"Play"}):null,
-          h("button",{class:"btn",type:"button",onclick:function(){quiz.i++;quiz.answered=false;renderQuiz()},text:quiz.i+1>=quiz.qs.length?"See score":"Next"}))
+        h("code",{text:t[5]})
       );
+      if(t[6]&&t[6].ff)fb.append(h("p",{class:"note"},h("b",{text:"False friend. "}),t[6].ff));
+      fb.append(h("div",{class:"row"},
+        CAN_SPEAK?h("button",{class:"btn ghost",type:"button",onclick:function(){speak(t[1],false)},text:"Play"}):null,
+        h("button",{class:"btn",type:"button",onclick:function(){quiz.i++;quiz.answered=false;renderQuiz()},text:quiz.i+1>=quiz.qs.length?"See score":"Next"})));
     };
     opts.append(b);
   });
